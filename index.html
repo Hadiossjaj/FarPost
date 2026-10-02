@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff6500">
+
+<title>FarPost Primorsky Krai</title>
+
+<style>
+:root{
+    --orange:#ff6500;
+    --orange2:#ff8b35;
+    --black:#111111;
+    --dark:#171717;
+    --bg:#f4f4f4;
+    --white:#ffffff;
+    --gray:#777;
+    --line:#e5e5e5;
+    --blue:#168cff;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    background:var(--bg);
+    color:#171717;
+}
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+}
+
+button{
+    cursor:pointer;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* TOP */
+
+.topbar{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:9px 15px;
+    font-size:13px;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    max-width:1250px;
+    height:72px;
+    margin:auto;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.logo{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:
+        radial-gradient(circle at 50% 45%,#fff 0 22%,transparent 23%),
+        linear-gradient(135deg,#ff6500,#ffb066);
+    border:4px solid white;
+    box-shadow:0 3px 15px #0002;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-weight:1000;
+    font-size:13px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:950;
+    font-size:18px;
+}
+
+.brand span{
+    color:var(--orange);
+}
+
+.navlinks{
+    margin-left:auto;
+    display:flex;
+    gap:20px;
+    font-size:14px;
+    font-weight:800;
+}
+
+.navlinks a:hover{
+    color:var(--orange);
+}
+
+.main-button{
+    border:0;
+    background:var(--orange);
+    color:white;
+    padding:12px 17px;
+    border-radius:12px;
+    font-weight:900;
+}
+
+.main-button:hover{
+    background:#e95700;
+}
+
+/* HERO */
+
+.hero{
+    background:
+        radial-gradient(circle at 85% 20%,#7c3200 0,transparent 28%),
+        linear-gradient(120deg,#090909,#1a1a1a);
+    color:white;
+}
+
+.hero-inner{
+    max-width:1250px;
+    margin:auto;
+    padding:70px 18px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:40px;
+    align-items:center;
+}
+
+.hero-label{
+    color:#ff934d;
+    font-weight:900;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+.hero h1{
+    margin:14px 0 20px;
+    font-size:clamp(42px,7vw,78px);
+    line-height:.95;
+    letter-spacing:-5px;
+}
+
+.hero h1 span{
+    color:var(--orange);
+}
+
+.hero p{
+    color:#ccc;
+    font-size:17px;
+    line-height:1.6;
+    max-width:650px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:25px;
+}
+
+.outline-button{
+    padding:12px 17px;
+    border-radius:12px;
+    border:1px solid #555;
+    background:transparent;
+    color:white;
+    font-weight:900;
+}
+
+.outline-button:hover{
+    border-color:var(--orange);
+}
+
+.hero-logo{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-logo-circle{
+    width:min(350px,75vw);
+    aspect-ratio:1;
+    border-radius:50%;
+    background:
+        radial-gradient(circle at 50% 43%,white 0 20%,transparent 21%),
+        linear-gradient(135deg,#ff6500,#ffb15c);
+    border:12px solid white;
+    box-shadow:
+        0 20px 70px #0008,
+        inset 0 0 50px #fff6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:45px;
+    font-weight:1000;
+}
+
+/* GENERAL */
+
+.container{
+    max-width:1250px;
+    margin:auto;
+    padding:55px 18px;
+}
+
+.section-title{
+    margin-bottom:20px;
+}
+
+.section-title h2{
+    font-size:32px;
+    letter-spacing:-1.5px;
+}
+
+.section-title p{
+    color:var(--gray);
+    margin-top:5px;
+}
+
+/* CATEGORIES */
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(8,1fr);
+    gap:10px;
+}
+
+.category{
+    border:1px solid var(--line);
+    background:white;
+    border-radius:16px;
+    padding:18px 8px;
+    text-align:center;
+    transition:.18s;
+}
+
+.category:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px #00000010;
+    border-color:#ffc29c;
+}
+
+.category .icon{
+    font-size:28px;
+}
+
+.category b{
+    display:block;
+    margin-top:8px;
+    font-size:13px;
+}
+
+.category small{
+    display:block;
+    margin-top:5px;
+    color:#999;
+}
+
+/* SEARCH */
+
+.search-box{
+    display:flex;
+    gap:8px;
+    background:white;
+    border:1px solid var(--line);
+    padding:8px;
+    border-radius:16px;
+    margin-bottom:18px;
+}
+
+.search-box input{
+    flex:1;
+    min-width:0;
+    border:0;
+    outline:0;
+    padding:12px;
+}
+
+.search-box select{
+    border:0;
+    border-left:1px solid var(--line);
+    padding:0 10px;
+    outline:0;
+    background:white;
+}
+
+.search-box button{
+    border:0;
+    background:#111;
+    color:white;
+    padding:0 20px;
+    border-radius:11px;
+    font-weight:900;
+}
+
+.filters{
+    display:flex;
+    gap:8px;
+    overflow:auto;
+    padding-bottom:8px;
+    margin-bottom:20px;
+}
+
+.filter{
+    white-space:nowrap;
+    border:1px solid var(--line);
+    background:white;
+    border-radius:999px;
+    padding:9px 15px;
+    font-weight:800;
+}
+
+.filter.active{
+    background:#111;
+    color:white;
+}
+
+/* ADS */
+
+.ads{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.ad{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:17px;
+    overflow:hidden;
+    position:relative;
+}
+
+.ad-image{
+    height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    background:linear-gradient(135deg,#ddd,#aaa);
+}
+
+.ad-content{
+    padding:15px;
+}
+
+.tag{
+    display:inline-block;
+    padding:5px 8px;
+    border-radius:999px;
+    background:#fff0e7;
+    color:#c84d00;
+    font-size:11px;
+    font-weight:900;
+}
+
+.ad h3{
+    margin:10px 0 7px;
+    font-size:17px;
+}
+
+.description{
+    color:#777;
+    font-size:13px;
+    line-height:1.45;
+    min-height:38px;
+}
+
+.ad-bottom{
+    margin-top:13px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+}
+
+.price{
+    font-size:20px;
+    font-weight:950;
+}
+
+.city{
+    color:#888;
+    font-size:11px;
+}
+
+.favorite{
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:38px;
+    height:38px;
+    border:0;
+    border-radius:50%;
+    background:white;
+    box-shadow:0 5px 15px #0002;
+    font-size:19px;
+}
+
+.favorite.active{
+    color:var(--orange);
+}
+
+.empty{
+    display:none;
+    background:white;
+    border:1px dashed #ccc;
+    border-radius:16px;
+    padding:40px;
+    text-align:center;
+    color:#777;
+}
+
+/* PRICING */
+
+.pricing{
+    background:
+        radial-gradient(circle at 90% 0,#003a63,transparent 30%),
+        linear-gradient(145deg,#070d14,#111820);
+    color:white;
+    border-radius:28px;
+    padding:45px 25px;
+    box-shadow:0 20px 60px #0002;
+}
+
+.pricing-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    padding-bottom:25px;
+    border-bottom:1px solid #27394b;
+}
+
+.pricing-header h2{
+    font-size:40px;
+    margin:8px 0;
+}
+
+.pricing-header p{
+    color:#bbc5cf;
+    margin-top:5px;
+}
+
+.pricing-header strong{
+    color:#fff;
+}
+
+.pricing-note{
+    border:1px solid #168cff;
+    background:#061421;
+    border-radius:16px;
+    padding:18px 24px;
+    text-align:center;
+    font-weight:800;
+}
+
+.pricing-note b{
+    color:#31a8ff;
+    font-size:20px;
+}
+
+.price-columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    margin-top:22px;
+}
+
+.price-column{
+    border:1px solid #168cff;
+    border-radius:20px;
+    padding:14px;
+    background:#091521;
+}
+
+.price-title{
+    font-size:18px;
+    font-weight:950;
+    padding:8px;
+}
+
+.price-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border:1px solid #168cff;
+    border-radius:14px;
+    padding:15px;
+    margin:9px 0;
+    background:#07111b;
+}
+
+.price-row span{
+    font-size:18px;
+    font-weight:800;
+}
+
+.price-row b{
+    color:#35aaff;
+    font-size:25px;
+}
+
+.profiles{
+    margin-top:18px;
+    padding:20px;
+    border:1px solid #168cff;
+    border-radius:20px;
+    background:#07111b;
+    text-align:center;
+}
+
+.profiles h3{
+    font-size:22px;
+    margin-bottom:12px;
+}
+
+.profiles a{
+    display:inline-block;
+    margin:5px 10px;
+    font-size:18px;
+    font-weight:900;
+}
+
+.profiles a:hover{
+    color:#35aaff;
+}
+
+/* PAYMENT */
+
+.payment{
+    margin-top:18px;
+    padding:22px;
+    border:1px solid #168cff;
+    border-radius:20px;
+    background:#07111b;
+}
+
+.payment h3{
+    font-size:24px;
+    margin-bottom:16px;
+}
+
+.payment-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.payment-card{
+    border:1px solid #29394b;
+    border-radius:15px;
+    padding:17px;
+    background:#0b1520;
+}
+
+.payment-card strong{
+    display:block;
+    font-size:18px;
+    margin-bottom:9px;
+}
+
+.payment-card span{
+    display:block;
+    word-break:break-word;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+.copy{
+    width:100%;
+    border:1px solid #168cff;
+    background:transparent;
+    color:#7bc8ff;
+    border-radius:9px;
+    padding:8px;
+    font-weight:800;
+}
+
+.copy:hover{
+    background:#168cff;
+    color:white;
+}
+
+.recipient{
+    margin-top:18px;
+}
+
+.payment-note{
+    margin-top:12px;
+    padding:14px;
+    background:#111c28;
+    border-radius:12px;
+    color:#bbc5cf;
+}
+
+.payment-note b{
+    color:#35aaff;
+}
+
+/* HOW */
+
+.dark-section{
+    background:#111;
+    color:white;
+}
+
+.dark-content{
+    max-width:1250px;
+    margin:auto;
+    padding:55px 18px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.dark-content h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.dark-content p{
+    color:#aaa;
+    line-height:1.6;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.feature{
+    border:1px solid #303030;
+    background:#191919;
+    border-radius:15px;
+    padding:20px;
+}
+
+.feature strong{
+    display:block;
+    margin-bottom:7px;
+}
+
+.feature span{
+    color:#aaa;
+    font-size:13px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:#aaa;
+    border-top:1px solid #292929;
+}
+
+.footer{
+    max-width:1250px;
+    margin:auto;
+    padding:32px 18px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer strong{
+    color:white;
+}
+
+.footer-links a{
+    margin-left:15px;
+}
+
+.footer-links a:hover{
+    color:var(--orange);
+}
+
+/* MODAL */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:500;
+    background:#0009;
+    padding:18px;
+    align-items:center;
+    justify-content:center;
+}
+
+.modal.open{
+    display:flex;
+}
+
+.modal-box{
+    width:min(560px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:white;
+    border-radius:22px;
+    padding:26px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:15px;
+    top:10px;
+    border:0;
+    background:none;
+    font-size:28px;
+}
+
+.form{
+    display:grid;
+    gap:11px;
+    margin-top:18px;
+}
+
+.form input,
+.form select,
+.form textarea{
+    width:100%;
+    border:1px solid var(--line);
+    border-radius:11px;
+    padding:13px;
+    outline:none;
+}
+
+.form textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+.form button{
+    border:0;
+    background:var(--orange);
+    color:white;
+    padding:13px;
+    border-radius:11px;
+    font-weight:900;
+}
+
+/* TOAST */
+
+.toast{
+    position:fixed;
+    left:50%;
+    bottom:25px;
+    transform:translateX(-50%) translateY(20px);
+    opacity:0;
+    pointer-events:none;
+    background:#111;
+    color:white;
+    padding:13px 18px;
+    border-radius:12px;
+    z-index:1000;
+    transition:.25s;
+}
+
+.toast.show{
+    opacity:1;
+    transform:translateX(-50%) translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+    .categories{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .ads{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .payment-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:760px){
+
+    .navlinks{
+        display:none;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+    }
+
+    .hero-logo{
+        order:-1;
+    }
+
+    .hero-logo-circle{
+        width:230px;
+    }
+
+    .price-columns{
+        grid-template-columns:1fr;
+    }
+
+    .dark-content{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:520px){
+
+    .nav{
+        height:64px;
+        padding:0 12px;
+    }
+
+    .brand{
+        font-size:14px;
+    }
+
+    .brand .logo{
+        width:42px;
+        height:42px;
+    }
+
+    .main-button{
+        padding:10px 12px;
+        font-size:12px;
+    }
+
+    .hero-inner{
+        padding:50px 15px;
+    }
+
+    .hero h1{
+        font-size:48px;
+        letter-spacing:-3px;
+    }
+
+    .container{
+        padding:40px 14px;
+    }
+
+    .categories{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .ads{
+        grid-template-columns:1fr;
+    }
+
+    .search-box{
+        flex-wrap:wrap;
+    }
+
+    .search-box input{
+        flex-basis:100%;
+    }
+
+    .search-box select{
+        width:100%;
+        border:0;
+        border-top:1px solid var(--line);
+        padding:10px;
+    }
+
+    .search-box button{
+        width:100%;
+        height:44px;
+    }
+
+    .pricing{
+        border-radius:20px;
+        padding:35px 12px;
+    }
+
+    .pricing-header{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .pricing-header h2{
+        font-size:34px;
+    }
+
+    .price-row b{
+        font-size:21px;
+    }
+
+    .payment-grid{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body id="top">
+
+<div class="topbar">
+    🟠 FarPost Primorsky Krai · объявления по всему Приморскому краю
+</div>
+
+<header>
+<nav class="nav">
+
+<a href="#top" class="brand">
+    <div class="logo">FP</div>
+    <div>FarPost <span>Primorsky Krai</span></div>
+</a>
+
+<div class="navlinks">
+    <a href="#categories">Категории</a>
+    <a href="#ads">Объявления</a>
+    <a href="#pricing">Прайс</a>
+    <a href="#how">Как работает</a>
+    <a href="#contacts">Контакты</a>
+</div>
+
+<button class="main-button" onclick="openPost()">
+    + Подать объявление
+</button>
+
+</nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div>
+
+<div class="hero-label">
+    ПРИМОРСКИЙ КРАЙ
+</div>
+
+<h1>
+    FarPost<br>
+    <span>Primorsky Krai</span>
+</h1>
+
+<p>
+    Современная доска объявлений для жителей Приморского края.
+    Покупайте, продавайте, находите услуги, работу и нужные вещи
+    в одном месте.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#ads" class="main-button">
+    Найти объявление
+</a>
+
+<button class="outline-button" onclick="openPost()">
+    Разместить объявление
+</button>
+
+</div>
+
+</div>
+
+<div class="hero-logo">
+    <div class="hero-logo-circle">
+        FarPost
+    </div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="container" id="categories">
+
+<div class="section-title">
+    <h2>Категории</h2>
+    <p>Выберите нужное направление</p>
+</div>
+
+<div class="categories">
+
+<button class="category" onclick="setCategory('Авто')">
+    <div class="icon">🚗</div>
+    <b>Авто</b>
+    <small>12 480</small>
+</button>
+
+<button class="category" onclick="setCategory('Недвижимость')">
+    <div class="icon">🏠</div>
+    <b>Недвижимость</b>
+    <small>8 921</small>
+</button>
+
+<button class="category" onclick="setCategory('Работа')">
+    <div class="icon">💼</div>
+    <b>Работа</b>
+    <small>3 217</small>
+</button>
+
+<button class="category" onclick="setCategory('Товары')">
+    <div class="icon">🛍️</div>
+    <b>Товары</b>
+    <small>18 640</small>
+</button>
+
+<button class="category" onclick="setCategory('Услуги')">
+    <div class="icon">🔧</div>
+    <b>Услуги</b>
+    <small>6 532</small>
+</button>
+
+<button class="category" onclick="setCategory('Находки')">
+    <div class="icon">🔎</div>
+    <b>Находки</b>
+    <small>421</small>
+</button>
+
+<button class="category" onclick="setCategory('Бесплатно')">
+    <div class="icon">🎁</div>
+    <b>Отдам</b>
+    <small>2 103</small>
+</button>
+
+<button class="category" onclick="setCategory('Другое')">
+    <div class="icon">📦</div>
+    <b>Разное</b>
+    <small>5 894</small>
+</button>
+
+</div>
+</section>
+
+
+<!-- ADS -->
+
+<section class="container" id="ads">
+
+<div class="section-title">
+    <h2>Объявления</h2>
+    <p id="resultCount">Популярные предложения</p>
+</div>
+
+<div class="search-box">
+
+<input
+    id="search"
+    type="search"
+    placeholder="Поиск: Toyota, квартира, работа..."
+>
+
+<select id="sort">
+    <option value="new">Сначала новые</option>
+    <option value="cheap">Сначала дешевле</option>
+    <option value="expensive">Сначала дороже</option>
+</select>
+
+<button onclick="renderAds()">
+    Найти
+</button>
+
+</div>
+
+<div class="filters">
+
+<button class="filter active" onclick="setCategory('Все')">
+    Все
+</button>
+
+<button class="filter" onclick="setCategory('Авто')">
+    Авто
+</button>
+
+<button class="filter" onclick="setCategory('Недвижимость')">
+    Недвижимость
+</button>
+
+<button class="filter" onclick="setCategory('Работа')">
+    Работа
+</button>
+
+<button class="filter" onclick="setCategory('Товары')">
+    Товары
+</button>
+
+<button class="filter" onclick="setCategory('Услуги')">
+    Услуги
+</button>
+
+</div>
+
+<div class="ads" id="adGrid"></div>
+
+<div class="empty" id="empty">
+    По вашему запросу ничего не найдено.
+    <br><br>
+    <button class="main-button" onclick="openPost()">
+        Разместить объявление
+    </button>
+</div>
+
+</section>
+
+
+<!-- PRICING -->
+
+<section class="container" id="pricing">
+
+<div class="pricing">
+
+<div class="pricing-header">
+
+<div>
+
+<h2>Прайс-лист</h2>
+
+<p>
+    Срок публикации — <strong>30 дней</strong>
+</p>
+
+<p>
+    Отдам бесплатно, продажи и находки —
+    <strong>БЕСПЛАТНО</strong>
+</p>
+
+</div>
+
+<div class="pricing-note">
+    Публикация сразу<br>
+    <b>в оба профиля</b>
+</div>
+
+</div>
+
+
+<div class="price-columns">
+
+<div class="price-column">
+
+<div class="price-title">
+    📸 ПОСТЫ
+</div>
+
+<div class="price-row">
+    <span>1 пост</span>
+    <b>250 ₽</b>
+</div>
+
+<div class="price-row">
+    <span>7 постов</span>
+    <b>1 650 ₽</b>
+</div>
+
+<div class="price-row">
+    <span>14 постов</span>
+    <b>2 450 ₽</b>
+</div>
+
+<div class="price-row">
+    <span>30 постов</span>
+    <b>4 050 ₽</b>
+</div>
+
+</div>
+
+
+<div class="price-column">
+
+<div class="price-title">
+    ＋ СТОРИС
+</div>
+
+<div class="price-row">
+    <span>1 сторис</span>
+    <b>150 ₽</b>
+</div>
+
+<div class="price-row">
+    <span>7 сторис</span>
+    <b>900 ₽</b>
+</div>
+
+<div class="price-row">
+    <span>14 сторис</span>
+    <b>1 350 ₽</b>
+</div>
+
+<div class="price-row">
+    <span>30 сторис</span>
+    <b>2 550 ₽</b>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="profiles">
+
+<h3>
+    📲 Публикация сразу в оба профиля
+</h3>
+
+<a
+href="https://instagram.com/farpost_vlada"
+target="_blank"
+rel="noopener"
+>
+    @farpost_vlada
+</a>
+
+<a
+href="https://instagram.com/farpost.ru_vl"
+target="_blank"
+rel="noopener"
+>
+    @farpost.ru_vl
+</a>
+
+</div>
+
+
+<!-- PAYMENT -->
+
+<div class="payment">
+
+<h3>
+    💳 Оплата
+</h3>
+
+<div class="payment-grid">
+
+<div class="payment-card">
+
+<strong>ВТБ</strong>
+
+<span id="vtb">
+    ВСТАВЬТЕ_НОМЕР_ВТБ
+</span>
+
+<button class="copy"
+onclick="copyText('ВСТАВЬТЕ_НОМЕР_ВТБ')">
+    Скопировать
+</button>
+
+</div>
+
+
+<div class="payment-card">
+
+<strong>Т-Банк</strong>
+
+<span id="tbank">
+    ВСТАВЬТЕ_НОМЕР_ТБАНК
+</span>
+
+<button class="copy"
+onclick="copyText('ВСТАВЬТЕ_НОМЕР_ТБАНК')">
+    Скопировать
+</button>
+
+</div>
+
+
+<div class="payment-card">
+
+<strong>Сбербанк</strong>
+
+<span id="sber">
+    ВСТАВЬТЕ_НОМЕР_СБЕРБАНК
+</span>
+
+<button class="copy"
+onclick="copyText('ВСТАВЬТЕ_НОМЕР_СБЕРБАНК')">
+    Скопировать
+</button>
+
+</div>
+
+
+<div class="payment-card">
+
+<strong>По номеру телефона</strong>
+
+<span>
+    ВСТАВЬТЕ_НОМЕР_ТЕЛЕФОНА
+</span>
+
+<button class="copy"
+onclick="copyText('ВСТАВЬТЕ_НОМЕР_ТЕЛЕФОНА')">
+    Скопировать
+</button>
+
+</div>
+
+</div>
+
+<div class="recipient">
+    Получатель: <strong>Владислав Б.</strong>
+</div>
+
+<div class="payment-note">
+    После оплаты напишите в Direct
+    <b>«оплачено»</b>
+    и отправьте данные отправителя.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="dark-section" id="how">
+
+<div class="dark-content">
+
+<div>
+
+<h2>
+    Объявления должны работать на вас.
+</h2>
+
+<p>
+    Создайте объявление с фотографиями,
+    описанием, ценой и контактами.
+    После публикации оно может быть размещено
+    сразу в обоих Instagram-профилях.
+</p>
+
+<br>
+
+<button class="main-button" onclick="openPost()">
+    Создать объявление
+</button>
+
+</div>
+
+
+<div class="features">
+
+<div class="feature">
+    <strong>📸 Фотографии</strong>
+    <span>
+        Добавляйте фотографии товара или услуги.
+    </span>
+</div>
+
+<div class="feature">
+    <strong>📍 Приморский край</strong>
+    <span>
+        Указывайте город и район.
+    </span>
+</div>
+
+<div class="feature">
+    <strong>⭐ Избранное</strong>
+    <span>
+        Сохраняйте интересные объявления.
+    </span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contacts">
+
+<div class="footer">
+
+<div>
+
+<strong>
+    FarPost Primorsky Krai
+</strong>
+
+<br>
+
+Доска объявлений Приморского края · 2026
+
+</div>
+
+<div class="footer-links">
+
+<a
+href="https://instagram.com/farpost_vlada"
+target="_blank"
+rel="noopener"
+>
+    @farpost_vlada
+</a>
+
+<a
+href="https://instagram.com/farpost.ru_vl"
+target="_blank"
+rel="noopener"
+>
+    @farpost.ru_vl
+</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- ADD AD MODAL -->
+
+<div
+class="modal"
+id="modal"
+onclick="if(event.target===this)closePost()"
+>
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closePost()"
+>
+    ×
+</button>
+
+<h2>
+    Новое объявление
+</h2>
+
+<p style="color:#777;margin-top:5px">
+    Заполните данные объявления.
+</p>
+
+
+<form
+class="form"
+id="adForm"
+onsubmit="addAd(event)"
+>
+
+<select id="fCategory" required>
+
+<option value="">
+    Выберите категорию
+</option>
+
+<option>Авто</option>
+<option>Недвижимость</option>
+<option>Работа</option>
+<option>Товары</option>
+<option>Услуги</option>
+<option>Находки</option>
+<option>Бесплатно</option>
+<option>Другое</option>
+
+</select>
+
+
+<input
+id="fTitle"
+placeholder="Название объявления"
+required
+>
+
+
+<input
+id="fPrice"
+type="number"
+min="0"
+placeholder="Цена, ₽"
+>
+
+
+<input
+id="fCity"
+placeholder="Город / район"
+>
+
+
+<textarea
+id="fDescription"
+placeholder="Описание объявления"
+></textarea>
+
+
+<input
+id="fContact"
+placeholder="Телефон / Telegram / другой контакт"
+>
+
+
+<button type="submit">
+    Опубликовать
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script>
+
+/* =========================
+   ДАННЫЕ
+========================= */
+
+const defaultAds = [
+
+{
+    id:1,
+    category:"Авто",
+    title:"Toyota — японский автомобиль",
+    price:1450000,
+    city:"Владивосток",
+    description:"Хорошее состояние. Подробности по телефону.",
+    emoji:"🚙"
+},
+
+{
+    id:2,
+    category:"Недвижимость",
+    title:"Квартира с видом на море",
+    price:7200000,
+    city:"Владивосток",
+    description:"Светлая квартира в удобном районе.",
+    emoji:"🏙️"
+},
+
+{
+    id:3,
+    category:"Товары",
+    title:"iPhone — отличное состояние",
+    price:65000,
+    city:"Уссурийск",
+    description:"Комплект, хорошее состояние.",
+    emoji:"📱"
+},
+
+{
+    id:4,
+    category:"Услуги",
+    title:"Ремонт техники на дому",
+    price:1500,
+    city:"Владивосток",
+    description:"Выезд по городу.",
+    emoji:"🔧"
+},
+
+{
+    id:5,
+    category:"Работа",
+    title:"Требуется продавец-консультант",
+    price:60000,
+    city:"Артём",
+    description:"График и условия обсуждаются.",
+    emoji:"💼"
+},
+
+{
+    id:6,
+    category:"Находки",
+    title:"Найдены ключи",
+    price:0,
+    city:"Находка",
+    description:"Описание и место уточняйте.",
+    emoji:"🔑"
+},
+
+{
+    id:7,
+    category:"Бесплатно",
+    title:"Отдам детские вещи",
+    price:0,
+    city:"Владивосток",
+    description:"Самовывоз.",
+    emoji:"🎁"
+},
+
+{
+    id:8,
+    category:"Авто",
+    title:"Диски и резина",
+    price:38000,
+    city:"Арсеньев",
+    description:"Комплект.",
+    emoji:"🛞"
+}
+
+];
+
+
+let ads =
+JSON.parse(localStorage.getItem("farpost_ads"))
+|| defaultAds;
+
+
+let currentCategory = "Все";
+
+
+/* =========================
+   ВСПОМОГАТЕЛЬНЫЕ
+========================= */
+
+function money(value){
+
+    if(!value || value === 0){
+        return "Бесплатно";
+    }
+
+    return new Intl.NumberFormat("ru-RU")
+        .format(value) + " ₽";
+}
+
+
+function escapeHTML(text){
+
+    return String(text)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+}
+
+
+/* =========================
+   РЕНДЕР ОБЪЯВЛЕНИЙ
+========================= */
+
+function renderAds(){
+
+    const search =
+        document
+        .getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const sort =
+        document
+        .getElementById("sort")
+        .value;
+
+
+    let result =
+        ads.filter(ad => {
+
+            const categoryOK =
+                currentCategory === "Все"
+                || ad.category === currentCategory;
+
+
+            const text =
+                (
+                    ad.title +
+                    " " +
+                    ad.category +
+                    " " +
+                    ad.city +
+                    " " +
+                    ad.description
+                ).toLowerCase();
+
+
+            return categoryOK
+                && (!search || text.includes(search));
+
+        });
+
+
+    if(sort === "cheap"){
+
+        result.sort(
+            (a,b)=>
+            (a.price || 0) -
+            (b.price || 0)
+        );
+
+    }
+
+
+    if(sort === "expensive"){
+
+        result.sort(
+            (a,b)=>
+            (b.price || 0) -
+            (a.price || 0)
+        );
+
+    }
+
+
+    if(sort === "new"){
+
+        result.sort(
+            (a,b)=>b.id-a.id
+        );
+
+    }
+
+
+    const grid =
+        document.getElementById("adGrid");
+
+
+    const empty =
+        document.getElementById("empty");
+
+
+    grid.innerHTML = "";
+
+
+    document.getElementById("resultCount")
+        .textContent =
+        "Найдено объявлений: " +
+        result.length;
+
+
+    if(result.length === 0){
+
+        empty.style.display = "block";
+
+        return;
+
+    }
+
+
+    empty.style.display = "none";
+
+
+    result.forEach(ad => {
+
+        const favorites =
+            JSON.parse(
+                localStorage.getItem("farpost_favorites")
+                || "[]"
+            );
+
+
+        const isFavorite =
+            favorites.includes(ad.id);
+
+
+        const article =
+        document.createElement("article");
+
+
+        article.className = "ad";
+
+
+        article.innerHTML = `
+
+            <button
+                class="favorite ${isFavorite ? "active" : ""}"
+                onclick="toggleFavorite(${ad.id},this)"
+            >
+                ♥
+            </button>
+
+            <div class="ad-image">
+                ${ad.emoji || "📦"}
+            </div>
+
+            <div class="ad-content">
+
+                <span class="tag">
+                    ${escapeHTML(ad.category)}
+                </span>
+
+                <h3>
+                    ${escapeHTML(ad.title)}
+                </h3>
+
+                <div class="description">
+                    ${escapeHTML(ad.description || "Без описания")}
+                </div>
+
+                <div class="ad-bottom">
+
+                    <div class="price">
+                        ${money(ad.price)}
+                    </div>
+
+                    <div class="city">
+                        📍 ${escapeHTML(ad.city || "Приморский край")}
+                    </div>
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        grid.appendChild(article);
+
+    });
+
+}
+
+
+/* =========================
+   КАТЕГОРИИ
+========================= */
+
+function setCategory(category){
+
+    currentCategory = category;
+
+
+    document
+        .querySelectorAll(".filter")
+        .forEach(button => {
+
+            button.classList.remove("active");
+
+            if(button.textContent.trim() === category){
+                button.classList.add("active");
+            }
+
+        });
+
+
+    document
+        .getElementById("ads")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+
+    renderAds();
+
+}
+
+
+/* =========================
+   ИЗБРАННОЕ
+========================= */
+
+function toggleFavorite(id,button){
+
+    let favorites =
+        JSON.parse(
+            localStorage.getItem("farpost_favorites")
+            || "[]"
+        );
+
+
+    if(favorites.includes(id)){
+
+        favorites =
+            favorites.filter(
+                item => item !== id
+            );
+
+        button.classList.remove("active");
+
+        showToast("Удалено из избранного");
+
+    }else{
+
+        favorites.push(id);
+
+        button.classList.add("active");
+
+        showToast("Добавлено в избранное");
+
+    }
+
+
+    localStorage.setItem(
+        "farpost_favorites",
+        JSON.stringify(favorites)
+    );
+
+}
+
+
+/* =========================
+   МОДАЛЬНОЕ ОКНО
+========================= */
+
+function openPost(){
+
+    document
+        .getElementById("modal")
+        .classList.add("open");
+
+}
+
+
+function closePost(){
+
+    document
+        .getElementById("modal")
+        .classList.remove("open");
+
+}
+
+
+/* =========================
+   ДОБАВЛЕНИЕ ОБЪЯВЛЕНИЯ
+========================= */
+
+function addAd(event){
+
+    event.preventDefault();
+
+
+    const category =
+        document.getElementById("fCategory").value;
+
+
+    const title =
+        document.getElementById("fTitle").value;
+
+
+    const price =
+        Number(
+            document.getElementById("fPrice").value
+        ) || 0;
+
+
+    const city =
+        document.getElementById("fCity").value
+        || "Приморский край";
+
+
+    const description =
+        document.getElementById("fDescription").value
+        || "Без описания";
+
+
+    const emojiMap = {
+
+        "Авто":"🚗",
+        "Недвижимость":"🏠",
+        "Работа":"💼",
+        "Товары":"🛍️",
+        "Услуги":"🔧",
+        "Находки":"🔎",
+        "Бесплатно":"🎁",
+        "Другое":"📦"
+
+    };
+
+
+    const newAd = {
+
+        id:Date.now(),
+
+        category,
+
+        title,
+
+        price,
+
+        city,
+
+        description,
+
+        emoji:emojiMap[category]
+
+    };
+
+
+    ads.push(newAd);
+
+
+    localStorage.setItem(
+        "farpost_ads",
+        JSON.stringify(ads)
+    );
+
+
+    document
+        .getElementById("adForm")
+        .reset();
+
+
+    closePost();
+
+
+    currentCategory = "Все";
+
+
+    renderAds();
+
+
+    document
+        .getElementById("ads")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+
+    showToast(
+        "Объявление добавлено"
+    );
+
+}
+
+
+/* =========================
+   КОПИРОВАНИЕ
+========================= */
+
+function copyText(text){
+
+    if(
+        !text
+        || text.startsWith("ВСТАВЬТЕ")
+    ){
+
+        showToast(
+            "Сначала укажите реквизиты в коде"
+        );
+
+        return;
+
+    }
+
+
+    navigator.clipboard
+        .writeText(text)
+        .then(() => {
+
+            showToast(
+                "Реквизиты скопированы"
+            );
+
+        })
+        .catch(() => {
+
+            const area =
+                document.createElement("textarea");
+
+            area.value = text;
+
+            document.body.appendChild(area);
+
+            area.select();
+
+            document.execCommand("copy");
+
+            area.remove();
+
+            showToast(
+                "Реквизиты скопированы"
+            );
+
+        });
+
+}
+
+
+/* =========================
+   УВЕДОМЛЕНИЕ
+========================= */
+
+function showToast(text){
+
+    const toast =
+        document.getElementById("toast");
+
+
+    toast.textContent = text;
+
+
+    toast.classList.add("show");
+
+
+    setTimeout(() => {
+
+        toast.classList.remove("show");
+
+    },2200);
+
+}
+
+
+/* =========================
+   ПОИСК ENTER
+========================= */
+
+document
+    .getElementById("search")
+    .addEventListener(
+        "keydown",
+        event => {
+
+            if(event.key === "Enter"){
+                renderAds();
+            }
+
+        }
+    );
+
+
+/* =========================
+   ESC
+========================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(event.key === "Escape"){
+            closePost();
+        }
+
+    }
+);
+
+
+/* =========================
+   СТАРТ
+========================= */
+
+renderAds();
+
+</script>
+
+</body>
+</html>
